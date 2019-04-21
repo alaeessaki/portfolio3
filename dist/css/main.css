@@ -13,13 +13,53 @@
   src: url("../assets/fonts/Lato-Medium.ttf");
 }
 
+@media screen and (max-width: 592px) {
+  body #container #box h1 {
+    font-size: 3.6vw !important;
+  }
+  body #container #box p {
+    font-size: 2.6vw !important;
+    letter-spacing: normal !important;
+  }
+  .navbar .navbar-collapse {
+    margin-right: 0 !important;
+  }
+}
+
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, a::-moz-selection, p::-moz-selection, br::-moz-selection {
+  background-color: black;
+  color: white;
+}
+
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, a::selection, p::selection, br::selection {
+  background-color: black;
+  color: white;
+}
+
+.collapsing, .show {
+  background-color: black;
+}
+
+.collapsing a, .show a {
+  color: white !important;
+}
+
+.collapsing h6, .show h6 {
+  color: white !important;
+}
+
 .navbar {
-  height: 11vh;
+  -webkit-z-index: 6000;
+  -moz-z-index: 6000;
+  -ms-z-index: 6000;
+  -o-z-index: 6000;
+  z-index: 6000;
   font-family: "Lato";
   background-color: white;
 }
 
 .navbar .navbar-brand {
+  margin-left: 35px;
   font-family: "Lato Medium";
   font-size: 17px;
   font-weight: 300;
@@ -33,22 +73,24 @@
 }
 
 .navbar .navbar-collapse .navbar-nav .nav-item a {
-  font-size: 14px;
+  font-size: 13px;
   color: black;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item h6 {
+  font-size: 10px;
 }
 
 body #container {
   height: 90vh;
   background-image: url("../assets/imgs/hero.jpg");
-  background-size: 100vw;
-  background-position-y: -25vh;
+  background-size: cover;
 }
 
 body #container #box {
   border: 1px solid white;
   padding: 10px;
   font-family: "Lato";
-  z-index: 6000;
   top: 32.6vh;
   left: 31vw;
   width: 37vw;
@@ -70,7 +112,7 @@ body #container #box p {
 }
 
 body #container #box::after {
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   top: -10px;
   left: -10px;
