@@ -1,4 +1,82 @@
-h1 {
-  color: red; }
+@font-face {
+  font-family: "AvantGarde Md BT";
+  src: url("../assets/fonts/AvantGarde Md BT.ttf");
+}
 
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: "Lato Medium";
+  src: url("../assets/fonts/Lato-Medium.ttf");
+}
+
+.navbar {
+  height: 11vh;
+  font-family: "Lato";
+  background-color: white;
+}
+
+.navbar .navbar-brand {
+  font-family: "Lato Medium";
+  font-size: 17px;
+  font-weight: 300;
+  border: 1px solid black;
+  padding: 1px 15px;
+  letter-spacing: 3px;
+}
+
+.navbar .navbar-collapse {
+  margin-right: 4rem;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item a {
+  font-size: 14px;
+  color: black;
+}
+
+body #container {
+  height: 90vh;
+  background-image: url("../assets/imgs/hero.jpg");
+  background-size: 100vw;
+  background-position-y: -25vh;
+}
+
+body #container #box {
+  border: 1px solid white;
+  padding: 10px;
+  font-family: "Lato";
+  z-index: 6000;
+  top: 32.6vh;
+  left: 31vw;
+  width: 37vw;
+  height: 33vh;
+  background-color: white;
+}
+
+body #container #box h1 {
+  margin-top: 18px;
+  font-size: 24px;
+  letter-spacing: 5px;
+  font-family: "Lato Medium";
+}
+
+body #container #box p {
+  font-size: 12px;
+  line-height: 35px;
+  letter-spacing: 5px;
+}
+
+body #container #box::after {
+  z-index: -1;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 18px);
+  height: calc(100% + 18px);
+  border: 1px solid rgba(255, 255, 255, 0.96);
+  content: "";
+}
 /*# sourceMappingURL=main.css.map */
