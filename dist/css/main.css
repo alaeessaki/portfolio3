@@ -13,6 +13,21 @@
   src: url("../assets/fonts/Lato-Medium.ttf");
 }
 
+@media screen and (max-width: 992px) {
+  .navbar .navbar-collapse .navbar-nav .nav-item a::before {
+    background-color: white;
+  }
+  .navbar .navbar-collapse {
+    background-color: black;
+  }
+  .navbar .navbar-collapse .navbar-nav .nav-item a {
+    color: white !important;
+  }
+  .navbar .navbar-collapse .navbar-nav .nav-item h6 {
+    color: white !important;
+  }
+}
+
 @media screen and (max-width: 592px) {
   body #container #box h1 {
     font-size: 3.6vw !important;
@@ -23,6 +38,12 @@
   }
   .navbar .navbar-collapse {
     margin-right: 0 !important;
+  }
+  .navbar .navbar-collapse .navbar-nav .nav-item a::before {
+    background-color: white !important;
+  }
+  .navbar .navbar-collapse .navbar-nav .nav-item a .navbar .navbar-collapse .navbar-nav .nav-item a:hover::before {
+    width: 100%;
   }
 }
 
@@ -36,23 +57,19 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
   color: white;
 }
 
-.collapsing, .show {
+.collapsing {
   background-color: black;
 }
 
-.collapsing a, .show a {
+.collapsing a {
   color: white !important;
 }
 
-.collapsing h6, .show h6 {
+.collapsing h6 {
   color: white !important;
 }
 
 .navbar {
-  -webkit-z-index: 6000;
-  -moz-z-index: 6000;
-  -ms-z-index: 6000;
-  -o-z-index: 6000;
   z-index: 6000;
   font-family: "Lato";
   background-color: white;
@@ -68,13 +85,43 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
   letter-spacing: 3px;
 }
 
+.navbar .navbar-toggler {
+  border: none;
+}
+
+.navbar .navbar-toggler i {
+  color: black;
+}
+
 .navbar .navbar-collapse {
   margin-right: 4rem;
 }
 
 .navbar .navbar-collapse .navbar-nav .nav-item a {
+  position: relative;
   font-size: 13px;
   color: black;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 5px;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .navbar .navbar-collapse .navbar-nav .nav-item h6 {
@@ -120,5 +167,20 @@ body #container #box::after {
   height: calc(100% + 18px);
   border: 1px solid rgba(255, 255, 255, 0.96);
   content: "";
+}
+
+body #projects_container .navs-list .navs-item {
+  list-style-type: none;
+  font-family: "Lato";
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  padding: 1px 12px;
+  border-radius: 11px;
+}
+
+body #projects_container .navs-list .active {
+  color: white;
+  background-color: black;
 }
 /*# sourceMappingURL=main.css.map */
